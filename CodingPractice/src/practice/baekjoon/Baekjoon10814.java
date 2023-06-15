@@ -33,20 +33,19 @@ public class Baekjoon10814 {
 		}
 		System.out.println(sb);
 	}
-}
-
-class Member implements Comparable<Member> {
-	String name;
-	int age;
-	
-	Member(int age, String name) {
-		this.age = age;
-		this.name = name;
+	static class Member implements Comparable<Member> {
+		String name;
+		int age;
+		
+		Member(int age, String name) {
+			this.age = age;
+			this.name = name;
+		}
+		
+		@Override
+		public int compareTo(Member o) {
+			return this.age - o.age;
+		}
+		
 	}
-	
-	@Override
-	public int compareTo(Member o) {
-		return this.age - o.age;
-	}
-	
 }
